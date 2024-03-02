@@ -131,7 +131,7 @@ console.log("Team Totals ", team_totals);
 let element = document.getElementById("content");
 
 let para = document.createElement("p");
-let node = document.createTextNode("This is new.");
+let node = document.createTextNode("This is newer than new.");
 para.appendChild(node);
 
 element.append(para);
