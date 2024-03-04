@@ -1,28 +1,28 @@
 
 let race_results = {
     1 : [ 
-        {"Tag":"GAS", "Team": "ALP", "Pos": "1"  , "FastLap": 1, "Points": 26},
-        {"Tag":"OCO", "Team": "ALP", "Pos": "2"  , "FastLap": 0, "Points": 18},
-        {"Tag":"HUL", "Team": "HAS", "Pos": "3"  , "FastLap": 0, "Points": 15},
-        {"Tag":"MAG", "Team": "HAS", "Pos": "4"  , "FastLap": 0, "Points": 12},
-        {"Tag":"BOT", "Team": "KCK", "Pos": "5"  , "FastLap": 0, "Points": 10},
-        {"Tag":"ZHO", "Team": "KCK", "Pos": "6"  , "FastLap": 0, "Points":  8},
-        {"Tag":"RIC", "Team": "RB2", "Pos": "7"  , "FastLap": 0, "Points":  6},
-        {"Tag":"TSU", "Team": "RB2", "Pos": "8"  , "FastLap": 0, "Points":  4},
-        {"Tag":"ALB", "Team": "WIL", "Pos": "9"  , "FastLap": 0, "Points":  2},
-        {"Tag":"SAR", "Team": "WIL", "Pos": "DNF", "FastLap": 0, "Points":  0}
+        {"Team": "ALP", "Tag":"GAS", "Pos": "8"  , "FastLap": 0, "Points":  4},
+        {"Team": "ALP", "Tag":"OCO", "Pos": "7"  , "FastLap": 0, "Points":  6},
+        {"Team": "HAS", "Tag":"HUL", "Pos": "6"  , "FastLap": 0, "Points":  8},
+        {"Team": "HAS", "Tag":"MAG", "Pos": "2"  , "FastLap": 0, "Points": 18},
+        {"Team": "KCK", "Tag":"BOT", "Pos": "9"  , "FastLap": 0, "Points":  2},
+        {"Team": "KCK", "Tag":"ZHO", "Pos": "1"  , "FastLap": 0, "Points": 25},
+        {"Team": "RB2", "Tag":"RIC", "Pos": "3"  , "FastLap": 0, "Points": 15},
+        {"Team": "RB2", "Tag":"TSU", "Pos": "4"  , "FastLap": 0, "Points": 12},
+        {"Team": "WIL", "Tag":"ALB", "Pos": "5"  , "FastLap": 0, "Points": 10},
+        {"Team": "WIL", "Tag":"SAR", "Pos": "10" , "FastLap": 1, "Points":  2}
     ],
     2 : [ 
-        {"Tag":"GAS", "Team": "ALP", "Pos": "5"  , "FastLap": 0, "Points": 10},
-        {"Tag":"OCO", "Team": "ALP", "Pos": "4"  , "FastLap": 0, "Points": 12},
-        {"Tag":"HUL", "Team": "HAS", "Pos": "6"  , "FastLap": 0, "Points":  8},
-        {"Tag":"MAG", "Team": "HAS", "Pos": "3"  , "FastLap": 0, "Points": 15},
-        {"Tag":"BOT", "Team": "KCK", "Pos": "DNF", "FastLap": 0, "Points":  0},
-        {"Tag":"ZHO", "Team": "KCK", "Pos": "2"  , "FastLap": 1, "Points": 19},
-        {"Tag":"RIC", "Team": "RB2", "Pos": "8"  , "FastLap": 0, "Points":  4},
-        {"Tag":"TSU", "Team": "RB2", "Pos": "1"  , "FastLap": 0, "Points": 25},
-        {"Tag":"ALB", "Team": "WIL", "Pos": "9"  , "FastLap": 0, "Points":  2},
-        {"Tag":"SAR", "Team": "WIL", "Pos": "7"  , "FastLap": 0, "Points":  6}
+        {"Team": "ALP", "Tag":"GAS", "Pos": "DNF"  , "FastLap": 0, "Points":  0},
+        {"Team": "ALP", "Tag":"OCO", "Pos": "DNF"  , "FastLap": 0, "Points":  0},
+        {"Team": "HAS", "Tag":"HUL", "Pos": "DNF"  , "FastLap": 0, "Points":  0},
+        {"Team": "HAS", "Tag":"MAG", "Pos": "DNF"  , "FastLap": 0, "Points":  0},
+        {"Team": "KCK", "Tag":"BOT", "Pos": "DNF"  , "FastLap": 0, "Points":  0},
+        {"Team": "KCK", "Tag":"ZHO", "Pos": "DNF"  , "FastLap": 0, "Points":  0},
+        {"Team": "RB2", "Tag":"RIC", "Pos": "DNF"  , "FastLap": 0, "Points":  0},
+        {"Team": "RB2", "Tag":"TSU", "Pos": "DNF"  , "FastLap": 0, "Points":  0},
+        {"Team": "WIL", "Tag":"ALB", "Pos": "DNF"  , "FastLap": 0, "Points":  0},
+        {"Team": "WIL", "Tag":"SAR", "Pos": "DNF"  , "FastLap": 0, "Points":  0}
     ]
 };
 
