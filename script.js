@@ -26,7 +26,7 @@ let race_results = {
     ]
 };
 
-let drivers_f1p5 = {
+let driver_names = {
     "GAS": "Pierre GASLY",
     "OCO": "Esteban OCON",
     "HUL": "Nico HULKENBERG",
@@ -39,38 +39,17 @@ let drivers_f1p5 = {
     "SAR": "Logan SARGEANT"
 }
 
-let teams_f1p5 = {
-    "ALP": "Alpine",
-    "HAS": "HAAS",
-    "RB2": "RB VCA",
-    "KCK": "Kick Sauber",
-    "WIL": "Williams"
-}
-
-let teams_f1 = {
-    "ALP": "Alpine",
-    "AST": "Aston Martin",
-    "FER": "Ferrari",
-    "HAS": "HAAS",
-    "MCL": "McLaren",
-    "MER": "Mercedes",
-    "RB2": "RB VCA",
-    "RB1": "Red Bull",
-    "KCK": "Kick Sauber",
-    "WIL": "Williams"
-}
-
-let team_colours_f1 = {
-    "ALP": "#ff88bc",
-    "AST": "#249970",
-    "FER": "#e8012b",
-    "HAS": "#b5babd",
-    "MCL": "#ff8100",
-    "MER": "#27f3d1",
-    "RB2": "#6592fe",
-    "RB1": "#3571c7",
-    "KCK": "#52e251",
-    "WIL": "#65c4ff"
+let teams = {
+    "ALP": {"Name":"Alpine", "Color": "#ff88bc"},
+    "AST": {"Name":"Aston Martin", "Color": "249970"},
+    "FER": {"Name":"Ferrari", "Color": "e8012b"},
+    "HAS": {"Name":"HAAS", "Color": "b5babd"},
+    "MCL": {"Name":"McLaren", "Color": "ff8100"},
+    "MER": {"Name":"Mercedes", "Color": "27f3d1"},
+    "RB2": {"Name":"RB VCA", "Color": "6592fe"},
+    "RB1": {"Name":"Red Bull", "Color": "3571c7"},
+    "KCK": {"Name":"Kick Sauber", "Color": "52e251"},
+    "WIL": {"Name":"Williams", "Color": "65c4ff"}
 }
 
 
@@ -87,6 +66,8 @@ for (let race_num in race_results) {
         let tag = driver["Tag"];
         let team = driver["Team"];
         let points = driver["Points"];
+        let driver_name = driver_names[tag];
+        let team_name = teams[team]["Name"];
         //console.log("Tag ", tag);
         
         // Check if driver already in the list
@@ -100,7 +81,7 @@ for (let race_num in race_results) {
         }
         if (driver_found == false) {
             //console.log("Driver Added ", driver);
-            driver_totals.push({"Tag": tag, "Team": team, "Points": points});
+            driver_totals.push({"Tag": tag, "Name": driver_name, "Team": team, "Points": points});
         }
         //console.log("Driver Totals ", driver_totals);
 
@@ -114,7 +95,7 @@ for (let race_num in race_results) {
         }
         if (team_found == false) {
             //console.log("Team Added ", team);
-            team_totals.push({"Team": team, "Points": points});
+            team_totals.push({"Team": team, "Name": team_name, "Points": points});
         }
         //console.log("Team Totals ", team_totals);
     }
@@ -123,7 +104,7 @@ for (let race_num in race_results) {
 }
 
 driver_totals.sort((a, b) => b["Points"] - a["Points"] || a["Tag"].localeCompare(b["Tag"]))
-team_totals.sort((a, b) => b["Points"] - a["Points"] || a["Team"].localeCompare(b["Team"]))
+team_totals.sort((a, b) => b["Points"] - a["Points"] || a["Name"].localeCompare(b["Name"]))
 
 console.log("Driver Totals ", driver_totals);
 console.log("Team Totals ", team_totals);
