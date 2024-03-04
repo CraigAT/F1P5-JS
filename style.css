@@ -1,5 +1,6 @@
 
 body {
+
     /* CSS carbon background taken from https://stackoverflow.com/questions/34556024/how-to-do-a-true-carbon-fiber-css-background */
     background-color: rgb(32, 32, 32);
     background-image: 
@@ -10,39 +11,28 @@ body {
     background-position: 0px 0px, 5px 5px, 0px 0px;
     /* CSS carbon background end */
 
-    /*background-color: #111;*/
+    /*background-color: #111;*/  /* Simpler dark background */
     color: #eee;
-
-    text-align: center;
+    
     font-size: larger;
+    text-align: center;
+
 }
 
+
 #content {
-    background-color: rgba(0, 0, 0, 0.5);
-    /*border: 2px solid rgba(255, 0, 0, 0.5);*/
+
+    width: 90%;
+
+    margin: auto;
+    padding: 2rem;
+    
     border: 2px solid rgba(255, 255, 0, 0.75);
     border-radius: 5px;
 
-    width: 90%;
-    margin: auto;
-    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);  /* Darker fade over the content background */
+    /*border: 2px solid rgba(255, 0, 0, 0.5);*/  /* Red option for border */
+
     text-align: center;
-}
 
-#site_header h1 {
-    color: yellow;
-}
-
-#site_header .altsiteheader {
-    color: red;
-}
-
-#site_header q {
-    color: #8B0000;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding:0;
 }
