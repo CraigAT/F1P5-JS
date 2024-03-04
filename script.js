@@ -1,4 +1,7 @@
 
+const MAX_DRIVERS = 10;
+const MAX_RACES = 24;
+
 let race_results = {
     1 : [ 
         {"Team": "ALP", "Tag":"GAS", "Pos": "8"  , "FastLap": 0, "Points":  4},
@@ -65,6 +68,7 @@ for (let race_num in race_results) {
         //console.log("Driver: ", driver);
         let tag = driver["Tag"];
         let team = driver["Team"];
+        let position = driver["Pos"];
         let points = driver["Points"];
         let driver_name = driver_names[tag];
         let team_name = teams[team]["Name"];
@@ -79,9 +83,14 @@ for (let race_num in race_results) {
                 entry["Points"] += points;
             }
         }
+        // If driver not found after search through the list we are building
         if (driver_found == false) {
             //console.log("Driver Added ", driver);
-            driver_totals.push({"Tag": tag, "Name": driver_name, "Team": team, "Points": points});
+            positions = new Array(MAX_DRIVERS).fill(0);
+            if ( ( Number(position) !== NaN ) && ( (Number(position) >= 1) && (Number(position) <= MAX_DRIVERS) ) ) {
+                positions[Number(position) - 1] += 1;
+            }
+            driver_totals.push({"Tag": tag, "Name": driver_name, "Team": team, "Points": points, "Positions": positions});
         }
         //console.log("Driver Totals ", driver_totals);
 
