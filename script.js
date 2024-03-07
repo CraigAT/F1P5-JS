@@ -4,35 +4,47 @@ const MAX_RACES = 24;
 
 let f1p5_data = {
 
-    "Race_Results": [
+    "Results": [
         {
-            "Race_Number": 1,
+            "Round": 1,
             "Race_Result": [
-                {"Team": "KCK", "Tag":"ZHO", "Pos": "1"  , "Fast_Lap": 0, "Points": 25},
-                {"Team": "HAS", "Tag":"MAG", "Pos": "2"  , "Fast_Lap": 0, "Points": 18},
-                {"Team": "RB2", "Tag":"RIC", "Pos": "3"  , "Fast_Lap": 0, "Points": 15},
-                {"Team": "RB2", "Tag":"TSU", "Pos": "4"  , "Fast_Lap": 0, "Points": 12},
-                {"Team": "WIL", "Tag":"ALB", "Pos": "5"  , "Fast_Lap": 0, "Points": 10},
-                {"Team": "HAS", "Tag":"HUL", "Pos": "6"  , "Fast_Lap": 0, "Points":  8},
-                {"Team": "ALP", "Tag":"OCO", "Pos": "7"  , "Fast_Lap": 0, "Points":  6},
-                {"Team": "ALP", "Tag":"GAS", "Pos": "8"  , "Fast_Lap": 0, "Points":  4},
-                {"Team": "KCK", "Tag":"BOT", "Pos": "9"  , "Fast_Lap": 0, "Points":  2},
-                {"Team": "WIL", "Tag":"SAR", "Pos": "10" , "Fast_Lap": 1, "Points":  2}
+                {"Team": "KCK", "Tag":"ZHO", "Result": "1"},
+                {"Team": "HAS", "Tag":"MAG", "Result": "2"},
+                {"Team": "RB2", "Tag":"RIC", "Result": "3"},
+                {"Team": "RB2", "Tag":"TSU", "Result": "4"},
+                {"Team": "WIL", "Tag":"ALB", "Result": "5"},
+                {"Team": "HAS", "Tag":"HUL", "Result": "6"},
+                {"Team": "ALP", "Tag":"OCO", "Result": "7"},
+                {"Team": "ALP", "Tag":"GAS", "Result": "8"},
+                {"Team": "KCK", "Tag":"BOT", "Result": "9"},
+                {"Team": "WIL", "Tag":"SAR", "Result": "10*"}
             ]
         },
         {
-            "Race_Number": 2,
+            "Round": 2,
             "Race_Result": [
-                {"Team": "ALP", "Tag":"GAS", "Pos": "DNF"  , "Fast_Lap": 0, "Points":  0},
-                {"Team": "ALP", "Tag":"OCO", "Pos": "DNF"  , "Fast_Lap": 0, "Points":  0},
-                {"Team": "HAS", "Tag":"HUL", "Pos": "DNF"  , "Fast_Lap": 0, "Points":  0},
-                {"Team": "HAS", "Tag":"MAG", "Pos": "DNF"  , "Fast_Lap": 0, "Points":  0},
-                {"Team": "KCK", "Tag":"BOT", "Pos": "DNF"  , "Fast_Lap": 0, "Points":  0},
-                {"Team": "KCK", "Tag":"ZHO", "Pos": "DNF"  , "Fast_Lap": 0, "Points":  0},
-                {"Team": "RB2", "Tag":"RIC", "Pos": "DNF"  , "Fast_Lap": 0, "Points":  0},
-                {"Team": "RB2", "Tag":"TSU", "Pos": "DNF"  , "Fast_Lap": 0, "Points":  0},
-                {"Team": "WIL", "Tag":"ALB", "Pos": "DNF"  , "Fast_Lap": 0, "Points":  0},
-                {"Team": "WIL", "Tag":"SAR", "Pos": "DNF"  , "Fast_Lap": 0, "Points":  0}
+                {"Team": "ALP", "Tag":"GAS", "Result": "1"},
+                {"Team": "HAS", "Tag":"HUL", "Result": "2"},
+                {"Team": "KCK", "Tag":"ZHO", "Result": "3"},
+                {"Team": "HAS", "Tag":"MAG", "Result": "4*"},
+                {"Team": "WIL", "Tag":"SAR", "Result": "5"},
+                {"Team": "WIL", "Tag":"ALB", "Result": "6"},
+                {"Team": "KCK", "Tag":"BOT", "Result": "7"},
+                {"Team": "ALP", "Tag":"OCO", "Result": "DNF"},
+                {"Team": "RB2", "Tag":"TSU", "Result": "DNS"},
+                {"Team": "RB2", "Tag":"RIC", "Result": "DSQ"}
+            ],
+            "Sprint_Result": [
+                {"Team": "WIL", "Tag":"ALB", "Result": "1"},
+                {"Team": "RB2", "Tag":"RIC", "Result": "2"},
+                {"Team": "HAS", "Tag":"MAG", "Result": "3"},
+                {"Team": "WIL", "Tag":"SAR", "Result": "4"},
+                {"Team": "KCK", "Tag":"ZHO", "Result": "5"},
+                {"Team": "ALP", "Tag":"GAS", "Result": "6"},
+                {"Team": "KCK", "Tag":"BOT", "Result": "7"},
+                {"Team": "RB2", "Tag":"TSU", "Result": "8"},
+                {"Team": "HAS", "Tag":"HUL", "Result": "9"},
+                {"Team": "ALP", "Tag":"OCO", "Result": "DNF"}
             ]
         }
     ],
@@ -61,8 +73,30 @@ let f1p5_data = {
         "RB1": {"Name":"Red Bull", "Color": "3571c7"},
         "KCK": {"Name":"Kick Sauber", "Color": "52e251"},
         "WIL": {"Name":"Williams", "Color": "65c4ff"}
+    },
+
+    "Race_Points_Table": {
+        "1*": 26, "2*": 19, "3*": 16, "4*": 13, "5*": 11, "6*": 9, "7*": 7, "8*": 5, "9*": 3, "10*": 2,
+        "1" : 25, "2" : 18, "3" : 15, "4" : 12, "5" : 10, "6" : 8, "7" : 6, "8" : 4, "9" : 2, "10" : 1,
+        "DNF": 0, "DNS": 0, "DSQ": 0
+    },
+
+    "Sprint_Points_Table": {
+        "1": 8, "2": 7, "3": 6, "4": 5, "5" : 4,
+        "6": 3, "7": 2, "8": 1, "9": 0, "10": 0,
+        "DNF": 0, "DNS": 0, "DSQ": 0,
     }
 
+}
+
+
+function add_points_to_driver_totals(totals, tag, points){
+
+}
+
+
+function add_points_to_team_totals(totals, team, points){
+    
 }
 
 
@@ -71,17 +105,52 @@ function calculateTotals(data) {
     let driver_totals = [];
     let team_totals = [];
 
-    for (let race of data["Race_Results"]) {
-        console.log(`Race No: ${race["Race_Number"]}`);
-        for (let place of race["Race_Result"]) {
-            console.log(`Driver: ${place["Tag"]}`);
+    for (let round of data["Results"]) {
+        //console.log(`Round No: ${round["Round"]}`);
 
-            let tag = place["Tag"];
-            let team = place["Team"];
+        console.log(`Race Result - Round: ${round["Round"]}`);
+        // Total up Race points
+        for (let entry of round["Race_Result"]) {
+
+            //console.log(`Driver: ${entry["Tag"]}`);
+            let tag = entry["Tag"];
+            let team = entry["Team"];
+            let result = entry["Result"];
+            let points = data["Race_Points_Table"][result];
+            //console.log(`Points: ${points}  -  ${result}`);
+            message = `Driver: ${tag} / Team: ${team} / Result: ${result} / Points: ${points}`;
+            let fastest_lap = result.endsWith("*");
+            if (fastest_lap) {
+                //console.log(`+ Fastest Lap`);
+                message += ` (Fastest Lap)`;
+            }
+            console.log(message);
+            add_points_to_driver_totals(driver_totals,tag,points);
+            add_points_to_team_totals(team_totals,team,points);
+        }
+
+        if ("Sprint_Result" in round) {
+            console.log(`Sprint Result - Round: ${round["Round"]}`);
+            // Total up Sprint points
+            for (let entry of round["Sprint_Result"]) {
+                //console.log(`Driver: ${entry["Tag"]}`);
+                let tag = entry["Tag"];
+                let team = entry["Team"];
+                let result = entry["Result"];
+                let points = data["Sprint_Points_Table"][result];
+                //console.log(`Points: ${points}`);
+                message = `Driver: ${tag} / Team: ${team} / Result: ${result} / Points: ${points}`;
+                console.log(message);
+                add_points_to_driver_totals(driver_totals, tag, points);
+                add_points_to_team_totals(team_totals, team, points);
+            }
+        }
+
+
             /*
-            let position = place["Pos"];
-            let fastest_lap = place["Fast_Lap"];
-            let points = place["Points"];
+            let position = entry["Pos"];
+            let fastest_lap = entry["Fast_Lap"];
+            
             let driver_name = driver_names[tag];
             let team_name = data["Teams"][team]["Name"];
 
@@ -95,7 +164,7 @@ function calculateTotals(data) {
                 }
             }
             */
-        }
+        
     }
 
 }
